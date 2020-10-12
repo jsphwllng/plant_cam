@@ -4,15 +4,17 @@ from pygame.locals import *
 import time
 
 #start the webcam
-pygame.init()
-pygame.camera.init()
-cam = pygame.camera.Camera("/dev/video0",(640,480))
-cam.start()
-#sleep for one second to allow camera to focus, etc
-time.sleep(1)
-#open image and save
 
-image = cam.get_image()
-pygame.image.save(image, "image.jpg")
+def capture_plant():
+    pygame.init()
+    pygame.camera.init()
+    cam = pygame.camera.Camera("/dev/video0",(640,640))
+    cam.start()
+    #sleep for one second to allow camera to focus, etc
+    time.sleep(4)
+    #open image and save
 
-print("image saved!")
+    image = cam.get_image()
+    pygame.image.save(image, "image.jpg")
+
+    print("image saved!")

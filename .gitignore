@@ -1,2 +1,9 @@
 .env
 *.jpg
+creds.py
+*.txt
+*.checkpoint
+*.json
+*.log
+*.pyc
+*.REMOVE_ME
