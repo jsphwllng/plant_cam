@@ -1,13 +1,8 @@
-import argparse
-import os
-import sys
-import creds
+import argparse, os, sys, random, creds, emoji
 from pycam import capture_plant
 from datetime import date
 from caption_maker import weather_caption, feeling
-import emoji
-import random
-from instabot import Bot  # noqa: E402
+from instabot import Bot
 
 plant_emojis = [":four_leaf_clover:", ":deciduous_tree:", ":herb:", ":cactus:", ":seedling:", ":evergreen_tree:"]
 
