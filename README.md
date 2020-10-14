@@ -1,5 +1,6 @@
-# developing a simple script to take a photo at midday, daily and upload this photo to an instagram account
-[the instagram bot]("https://www.instagram.com/plantbot.py/")
+<center><img src="https://i.imgur.com/7YiuuOh.png" alt="a robot with a plant in its head" stlye="text-align: center;"></center>
+
+## a simple script to take a photo at midday, daily and upload this photo to [an instagram account](https://www.instagram.com/plantbot.py/)
 
 built using:
 * pygame
