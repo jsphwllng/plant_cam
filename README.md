@@ -7,3 +7,4 @@ built using:
 * instabot
 * openweathermap
 * emoji
+* a succulent 
