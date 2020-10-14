@@ -1,5 +1,6 @@
 import argparse, os, sys, random, creds, emoji
 from pycam import capture_plant
+from events import events
 from datetime import date
 from caption_maker import weather_caption, feeling
 from instabot import Bot
@@ -8,8 +9,12 @@ plant_emojis = [":four_leaf_clover:", ":deciduous_tree:", ":herb:", ":cactus:", 
 
 sys.path.append(os.path.join(sys.path[0], "../"))
 
+if events() != "":
+    event_text = f"{events()}\n"
+else:
+    event_text = ""
 
-caption = f"{date.today()}  {emoji.emojize(random.choice(plant_emojis))}\n{weather_caption()}°C i am {feeling()}!\n\n\n\n#plants #nature #bot"
+caption = f"{date.today()}  {emoji.emojize(random.choice(plant_emojis))}\n{event_text}{weather_caption()}°C i am {feeling()}!\n\n\n\n#plants #nature #bot"
 
 bot = Bot()
 bot.login(username=creds.u, password=creds.p)
