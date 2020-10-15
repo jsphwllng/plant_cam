@@ -4,8 +4,8 @@ import creds
 def weather_caption():
     r = requests.get(
         f"https://api.openweathermap.org/data/2.5/weather?q=berlin&appid={creds.weather}")
-    temp = r.json()['main']['temp'] - 273.15
-    return int(temp)
+    return r.json()['main']['temp'] - 273.15
+     
 
 
 def feeling():
