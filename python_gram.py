@@ -9,10 +9,7 @@ plant_emojis = [":four_leaf_clover:", ":deciduous_tree:", ":herb:", ":cactus:", 
 
 sys.path.append(os.path.join(sys.path[0], "../"))
 
-if events() != "":
-    event_text = f"{events()}\n"
-else:
-    event_text = ""
+event_text = f"{events()}\n" if events != "" else event_text = events()
 
 caption = f"{date.today()}  {emoji.emojize(random.choice(plant_emojis))}\n{event_text}{weather_caption()}°C i am {feeling()}!\n\n\n\n#plants #nature #bot"
 

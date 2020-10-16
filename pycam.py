@@ -11,8 +11,10 @@ def capture_plant():
     pygame.camera.init()
     if random.randint(0, 100) == 33:
         cam = pygame.camera.Camera("/dev/video2",(1080,1080), "YUV")
+        print("wow, lucky! filter applied.")
     elif random.randint(0,100) == 34:
         cam = pygame.camera.Camera("/dev/video2",(1080,1080), "HSV")
+        print("wow, lucky! filter applied.")
     else:
         cam = pygame.camera.Camera("/dev/video2",(1080,1080))
     cam.start()
